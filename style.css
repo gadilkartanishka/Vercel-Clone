@@ -126,7 +126,7 @@ body {
 
 .hero-heading {
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
   color: #ededed;
   margin-bottom: 24px;
 }
@@ -169,12 +169,15 @@ body {
   color: #ededed;
   border: 1px solid rgb(51, 51, 51);
 }
+
 .btn-hero-secondary:hover {
   background-color: #ffffff17;
 }
+
 .btn-hero-primary:hover {
   background-color: rgb(237, 237, 237);
 }
+
 .hero-wrapper {
   display: flex;
   justify-content: center;
@@ -183,6 +186,7 @@ body {
 }
 
 .hero {
+  position: relative;
   width: 85%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -194,6 +198,40 @@ body {
   border-left: 1px solid rgb(38, 38, 38);
   border-right: 1px solid rgb(38, 38, 38);
   border-bottom: 1px solid rgb(38, 38, 38);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 20% 80%,
+      rgba(59, 130, 246, 0.6) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 50% 90%,
+      rgba(34, 197, 94, 0.4) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(239, 68, 68, 0.6) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 65% 85%,
+      rgba(234, 179, 8, 0.4) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 35% 85%,
+      rgba(168, 85, 247, 0.3) 0%,
+      transparent 30%
+    );
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -209,6 +247,7 @@ body {
   background-color: #000;
   border: 1px solid rgb(38, 38, 38);
 }
+
 .hero-triangle {
   grid-column: 1 / -1;
   grid-row: 5 / 9;
@@ -218,6 +257,7 @@ body {
   z-index: 1;
   pointer-events: none;
 }
+
 .marquee-section {
   display: flex;
   justify-content: center;
@@ -263,6 +303,7 @@ body {
   display: inline-flex;
   align-items: center;
 }
+
 .scale-section {
   display: flex;
   justify-content: center;
@@ -312,6 +353,7 @@ body {
 .scale-pill:hover {
   background: rgb(31, 31, 31);
 }
+
 .cta-section {
   display: flex;
   justify-content: center;
@@ -342,6 +384,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  align-items: flex-start;
 }
 
 .cta-heading {
@@ -389,15 +432,7 @@ body {
   font-size: 14px;
   text-decoration: none;
 }
-.cta-secondary {
-  flex: 1;
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  align-items: flex-start;
-}
+
 .cta-btn-secondary {
   display: flex;
   align-items: center;
@@ -415,6 +450,105 @@ body {
 .cta-btn-primary:hover {
   background: rgb(237, 237, 237);
 }
+
 .cta-btn-secondary:hover {
   background: rgb(31, 31, 31);
+}
+
+.footer {
+  padding: 40px 24px;
+  margin-top: 100px;
+}
+
+.footer-grid-top,
+.footer-grid-bottom {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.footer-heading {
+  font-size: 12px;
+  font-family: "Geist Mono", monospace;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ededed;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links li {
+  height: auto;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.footer-links a {
+  font-size: 14px;
+  font-family: "Geist", sans-serif;
+  color: #888888;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.footer-links a:hover {
+  color: #ededed;
+}
+
+.badge {
+  font-size: 8px;
+  font-family: "Geist Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px;
+  border-radius: 4px;
+  border: 1px solid rgb(51, 51, 51);
+  color: #ededed;
+  background: transparent;
+}
+
+.footer-logo-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 2px;
+}
+
+.footer-logo-col svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 24px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0070f3;
+  flex-shrink: 0;
+}
+
+.status-text {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #0070f3;
 }
