@@ -6,71 +6,73 @@
 
 body {
   background-color: #000;
+  color: rgb(237, 237, 237);
   font-family: "Geist", sans-serif;
 }
-.vercelLogo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.vercelLogo img {
-  height: 18px;
-  width: auto;
-  filter: invert(1);
-}
-.chevron {
-  width: 14px;
-  height: 14px;
-  color: currentcolor;
-}
+
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   height: 64px;
   padding: 0 24px;
-  color: rgb(237, 237, 237);
-  justify-content: space-between;
 }
+
 .rightHalf {
   display: flex;
   align-items: center;
   gap: 32px;
 }
+
+.vercelLogo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.vercelLogo img {
+  height: 18px;
+  width: auto;
+  filter: invert(1);
+}
+
 .navbar-links {
   display: flex;
   align-items: center;
   list-style: none;
+  gap: 4px;
 }
 
-.nav-btn {
+.nav-btn,
+.nav-link {
   display: flex;
   align-items: center;
-  /* gap: 4px; */
-  background: transparent;
-  border: none;
+  gap: 4px;
   color: rgb(161, 161, 161);
   font-family: "Geist", sans-serif;
   font-size: 14px;
   padding: 8px 12px;
   border-radius: 9999px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.nav-link {
-  display: flex;
-  align-items: center;
-  color: rgb(161, 161, 161);
-  font-size: 14px;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 9999px;
+.nav-btn {
+  background: transparent;
+  border: none;
 }
 
 .nav-btn:hover,
 .nav-link:hover {
   background-color: rgb(31, 31, 31);
   color: rgb(237, 237, 237) !important;
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  color: currentColor;
 }
 
 .navbar-buttons {
@@ -80,34 +82,41 @@ body {
 }
 
 .btn-login,
+.btn-askai,
+.btn-signup {
+  font-family: "Geist", sans-serif;
+  font-size: 14px;
+  height: 32px;
+  padding: 0 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-login span,
+.btn-askai span,
+.btn-signup span {
+  padding: 0 6px;
+}
+
+.btn-login,
 .btn-askai {
   background: #0a0a0a;
   border: 1px solid rgb(51, 51, 51);
   color: rgb(237, 237, 237);
-  font-family: "Geist", sans-serif;
-  font-size: 14px;
-  height: 32px;
-  padding: 0 12px;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 .btn-signup {
   background: #fff;
   border: none;
   color: #0a0a0a;
-  font-family: "Geist", sans-serif;
-  font-size: 14px;
-  height: 32px;
-  padding: 0 12px;
-  border-radius: 6px;
-  cursor: pointer;
   font-weight: 500;
 }
+
 .btn-login:hover,
 .btn-askai:hover {
   background-color: rgb(31, 31, 31);
 }
+
 .btn-signup:hover {
   background-color: rgb(237, 237, 237);
 }
